@@ -1,0 +1,137 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.login-button {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 40px auto;
+  padding: 10px;
+  background-color: #3b5998;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.page-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.page-item {
+  margin-bottom: 20px;
+}
+
+.page-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.page-posts-heading {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Poppins";
+}
+
+.post-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.post-item {
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.post-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.comment-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.comment-item {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.message {
+  margin-bottom: 5px;
+}
+
+.comment {
+  width: 50%;
+  padding: 5px;
+  background-color: white;
+}
+
+.reply-section {
+  margin-top: 10px;
+}
+
+.reply-input {
+  width: 50%;
+  padding: 5px;
+  margin: 0 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.reply-button {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 5px 10px;
+  background-color: #3b5998;
+  color: #fff;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.next-button {
+  display: block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #3b5998;
+  color: #fff;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* InstagramLogin.css */
+
+.post-dropdown , .post-select{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.post-dropdown .post-select option {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Add additional styles as needed */
