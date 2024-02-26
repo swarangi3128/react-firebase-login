@@ -198,4 +198,60 @@ function InstagramLoginButton() {
                 {
                     posts.length > 0 && (
                         <div className='post-dropdown'>
-                            <h3 className='
+                            <h3 className='post-heading'>Select Post: </h3>
+                            <select className="post-select" onChange={(e) => handlePostSelect(e.target.value)}>
+                                <option value="">Select a Post</option>
+                                {posts.slice(0, commentIndex).map((post) => (
+                                    <option key={post.id} value={post.id}>
+                                        {post.name}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+                    )
+                }
+                
+                {selectedPost && (
+                    <div className="selected-post">
+                        <h1 className="post-name">Selected Post: {selectedPost.name}</h1>
+                        <ul className="comment-list">
+                            {selectedPost.comments.slice(0, commentIndex).map((comment) => (
+                                <li key={comment.id} className="comment-item">
+                                    <div className="comment">
+                                        {comment.name} Commented: <br />
+                                        {comment.message}
+                                    </div>
+                                    <div className="reply-section">
+                                        <input
+                                            type="text"
+                                            className="reply-input"
+                                            placeholder="Write a reply..."
+                                            value={replyInputs[comment.id] || ''}
+                                            onChange={(e) => handleInputChange(comment.id, e)}
+                                        />
+                                        <button
+                                            className="reply-button"
+                                            onClick={() => handleReply(selectedPost.id, comment.id, selectedPost.accessToken)}
+                                        >
+                                            Reply
+                                        </button>
+                                    </div>
+                                </li>
+                            ))}
+                        </ul>
+                        {selectedPost.comments.length > commentIndex && (
+                            <button className="load-more-comments-button" onClick={handleLoadMoreComments}>
+                                Load More Comments
+                            </button>
+                        )}
+                    </div>
+                )}
+                {pageIds.map((pageId, index) => (
+                    <PageConversations key={pageId} pageId={pageId} accessToken={accessTokens[index]} />
+                ))}
+            </div>
+        </>
+    )
+}
+
+export default InstagramLoginButton;
