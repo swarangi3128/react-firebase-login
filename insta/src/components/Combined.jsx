@@ -18,7 +18,7 @@ function InstagramLoginButton() {
     const [selectedPost, setSelectedPost] = useState(null);
     const [selectedPage, setSelectedPage] = useState('');
 
-    const handleFacebookLogin = () => {
+    const handleinstagramLogin = () => {
         setLoading(true);
         window.FB.login(
             (response) => {
@@ -192,8 +192,8 @@ function InstagramLoginButton() {
         <>
             <div className="container">
                 {loading && <Loader />}
-                <button className="login-button" onClick={handleFacebookLogin}>
-                    Login with Facebook
+                <button className="login-button" onClick={handleinstagramLogin}>
+                    Login with instagram
                 </button>
                 {
                     posts.length > 0 && (
